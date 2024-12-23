@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+    id "io.freefair.lombok" version "${freeFairLombokVersion}"
+}
+
+group = 'com.auction'
+version = '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation project(':exceptions')
+
+    implementation "org.springdoc:springdoc-openapi-starter-webmvc-ui:${openapiVersion}"
+}
+
+test {
+    useJUnitPlatform()
+}

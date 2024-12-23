@@ -1,0 +1,9 @@
+rootProject.name = 'auction-product-template'
+
+include ':auction-service-interface'
+include ':auction-service-implementation'
+project(':auction-service-interface').projectDir = file('components/services/interface')
+project(':auction-service-implementation').projectDir = file('components/services/implementation')
+
+include ':exceptions'
+project(':exceptions').projectDir = file('components/common/exceptions')
